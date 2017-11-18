@@ -1,0 +1,16 @@
+default: &default
+  namespace: Bazzar
+  host: localhost
+  port: 6379
+  sidekiq_db: 0
+  sidekiq_network_timeout: 5  #time in secs
+  db: 2
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+
+test:
+  <<: *default
