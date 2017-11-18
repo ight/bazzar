@@ -6,6 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
+# Ignore .yml files from config folder
+/config/bazzar.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
