@@ -1,0 +1,16 @@
+## Environment settings
+defaults: &defaults
+
+  host: localhost
+  port: 5000
+  protocol: http
+  relative_url_root: /
+
+development: &development
+  <<: *defaults
+
+test:
+  <<: *development
+
+production:
+  <<: *defaults
