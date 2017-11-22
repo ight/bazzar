@@ -1,0 +1,13 @@
+default: &default
+  namespace: Bazzar
+  host: ['localhost']
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  host: loclhost
+
+test:
+  <<: *default

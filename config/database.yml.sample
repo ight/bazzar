@@ -22,8 +22,8 @@ default: &default
 development:
   <<: *default
   database: bazzard_development
-  username: postgres
-  password: postgres
+  username: 
+  password: 
   host: localhost
   port: 5432
 
@@ -49,12 +49,12 @@ development:
 test:
   <<: *default
   database: bazzar_test
-  username: postgres
-  password: postgres
+  username: 
+  password: 
   host: localhost
   port: 5432
 
 production:
-  database: sample_postgres_production
-  username: sample_postgres
+  database: bazzar_production
+  username: 
   password:

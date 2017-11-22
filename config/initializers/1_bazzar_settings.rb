@@ -5,14 +5,14 @@ class BazzarSettings < Settingslogic
   namespace Rails.env
 
   def self.build_url
-  	custom_port = ":#{port}" unless [443.80].include?(port.to_i)
-  	app_path = 
-  	  [ protocol,
-  	    "://",
-  	    host,
-  	    custom_port,
-  	    relative_url
-  	  ].join('')
+    custom_port = ":#{port}" unless [443.80].include?(port.to_i)
+    app_path =
+      [ protocol,
+        "://",
+        host,
+        custom_port,
+        relative_url_root
+      ].join('')
   end
 end
 
