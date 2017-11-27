@@ -42,6 +42,18 @@ gem 'dalli'
 #For Redis Namespaces
 gem 'redis-namespace'
 
+# For API
+gem 'swagger-docs'
+gem 'httparty'
+gem 'rabl'
+
+# Template from html to slim
+gem 'slim'
+
+# For parsing JSON
+gem 'rails-patch-json-encode'
+gem 'oj'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
