@@ -1,7 +1,7 @@
 # Overriding the transform_path method in this class
 class Swagger::Docs::Config
   def self.transform_path(path, api_version)
-    "api/v#{api_version.to_i}/path"
+    "api/v#{api_version.to_i}/#{path}"
   end
 
 Swagger::Docs::Config.base_api_controller = ApplicationController
