@@ -3,7 +3,10 @@
   "swaggerVersion": "1.2",
   "basePath": "http://localhost:5000",
   "apis": [
-
+    {
+      "path": "/api/v1/api/v1/categories.{format}",
+      "description": "Handle Categories in Market"
+    }
   ],
   "authorizations": null
 }

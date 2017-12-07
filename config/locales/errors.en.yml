@@ -1,0 +1,4 @@
+en:
+  errors:
+    categories:
+      invalid_category_name: 'Please provide a valid category name'
