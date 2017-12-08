@@ -5,6 +5,69 @@
   "resourcePath": "categories",
   "apis": [
     {
+      "path": "/api/v1/categories/{id}.json",
+      "operations": [
+        {
+          "summary": "Remove a category from Bazzar",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "category_id",
+              "type": "integer",
+              "description": "category id",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "responseModel": null,
+              "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "responseModel": null,
+              "message": "Forbidden"
+            },
+            {
+              "code": 422,
+              "responseModel": null,
+              "message": "Unprocessable Entity"
+            }
+          ],
+          "nickname": "Api::V1::Categories#destroy",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "path": "/api/v1/categories.json",
+      "operations": [
+        {
+          "summary": "List all the categories at Bazzar",
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Ok"
+            },
+            {
+              "code": 400,
+              "responseModel": null,
+              "message": "Bad Request"
+            }
+          ],
+          "nickname": "Api::V1::Categories#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "path": "/api/v1/categories.json",
       "operations": [
         {
@@ -33,6 +96,11 @@
               "code": 401,
               "responseModel": null,
               "message": "Unauthorized"
+            },
+            {
+              "code": 403,
+              "responseModel": null,
+              "message": "Forbidden"
             },
             {
               "code": 406,
