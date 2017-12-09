@@ -1,11 +1,14 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+titan_wrist_watch:
+  name: 'Titan silver gold'
+  brand: titan
+  category: wrist_watch
+  price: '2000'
+  code: 'WW0001'
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+titan_wall_clock:
+  name: 'Titan happynes home'
+  brand: titan
+  category: wall_clock
+  price: '7000'
+  code: 'WC0002'
+
