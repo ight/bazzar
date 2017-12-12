@@ -2,6 +2,10 @@ titan:
   name: 'Titan'
   category: wrist_watch
 
+rolex:
+  name: 'Rolex'
+  category: wrist_watch
+
 ajanta:
   name: 'Ajanta'
   category: wall_clock

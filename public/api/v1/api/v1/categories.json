@@ -5,7 +5,7 @@
   "resourcePath": "categories",
   "apis": [
     {
-      "path": "/api/v1/categories/{id}.json",
+      "path": "/api/v1/categories.json",
       "operations": [
         {
           "summary": "Remove a category from Bazzar",
