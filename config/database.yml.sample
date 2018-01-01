@@ -21,7 +21,7 @@ default: &default
 # Development Setting
 development:
   <<: *default
-  database: bazzard_development
+  database: bazzar_development
   username: 
   password: 
   host: localhost
