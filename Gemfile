@@ -54,6 +54,9 @@ gem 'slim'
 gem 'rails-patch-json-encode'
 gem 'oj'
 
+# Authentication gem
+gem 'devise'
+
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', group: :development
 
