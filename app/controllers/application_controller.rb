@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :authenticate_user!
+
   rescue_from Bazzar::Exception::InvalidParameter, with: :invalid_parameter
 
   def render_error_json(message, status = :bad_request)
