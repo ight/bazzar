@@ -16,4 +16,16 @@ class ApplicationController < ActionController::Base
   def invalid_parameter(exception)
     render_error_json(exception.message)
   end
+
+  def authenticate_user!
+    unauthorized_access if current_user.blank?
+  end
+
+  def unauthorized_access
+    render_error_json(_('errors.unauthorized'), :unauthorized)
+  end
+
+  def current_user
+    @current_user ||= User.from_authentication_token(request.env["HTTP_X_API_KEY"], true)
+  end
 end
