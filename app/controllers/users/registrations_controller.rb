@@ -1,6 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
-	skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   before_filter :configure_permitted_parameters
 
 
@@ -26,12 +26,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:contact_number, :email, :first_name, :last_name, :password, :password_confirmation])
-    # devise_parameter_sanitizer.for(:sign_up).push(:contact_number, :email, :first_name, :last_name, :password, :password_confirmation)
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:contact_number, :email, :first_name, :last_name, :password, :password_confirmation, :authentication_token])
   end
-
-  # private
-  # def sign_up_params
-  #   params.require(:user).permit(:contact_number, :email, :first_name, :last_name, :password, :password_confirmation)
-  # end
 end

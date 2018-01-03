@@ -19,3 +19,6 @@ end
 BazzarSettings['host'] ||= 'localhost'
 BazzarSettings['relative_url'] ||= '/'
 BazzarSettings['url'] ||= BazzarSettings.build_url
+
+BazzarSettings['authentication'] ||= Settingslogic.new({})
+BazzarSettings.authentication['session_expiration_time'] ||= 520
