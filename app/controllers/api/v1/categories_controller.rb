@@ -1,6 +1,5 @@
 class Api::V1::CategoriesController < ApplicationController
 
-  skip_before_action :verify_authenticity_token, :only => [:create, :destroy]
   swagger_controller :categories, "Handle Categories at Bazzar"
 
   swagger_api :create do
