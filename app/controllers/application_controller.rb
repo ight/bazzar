@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
   include Swagger::Docs::ImpotentMethods
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
-
+  protect_from_forgery with: :exception, unless: -> { request.format.json? }
   before_action :authenticate_user!
 
   rescue_from Bazzar::Exception::InvalidParameter, with: :invalid_parameter
@@ -26,6 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
+    User.from_authentication_token(request.env["HTTP_X_API_KEY"], true)
     @current_user ||= User.from_authentication_token(request.env["HTTP_X_API_KEY"], true)
   end
 end
