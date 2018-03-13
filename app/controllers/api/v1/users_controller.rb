@@ -1,5 +1,8 @@
 class Api::V1::UsersController < ApplicationController
 
+  # Checking authorization
+  load_and_authorize_resource :user
+
   swagger_controller :users, "For User actions"
 
 
