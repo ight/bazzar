@@ -60,6 +60,9 @@ gem 'devise'
 # Authorization
 gem "cancancan"
 
+# Role
+gem "rolify"
+
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', group: :development
 
