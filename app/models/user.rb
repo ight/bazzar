@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  rolify after_add: [:touch_updated_at], after_remove: [:touch_updated_at]
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -46,5 +48,10 @@ class User < ApplicationRecord
     end
     user
   end
+
+  def touch_updated_at(_role)
+    update_column(:updated_at, Time.now)
+  end
+
 end
 
