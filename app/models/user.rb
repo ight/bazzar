@@ -31,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def formulate_auth_token
-    str = Digest::MD5.digest("#{SecureRandom.uuid}_#{Time.now.to_i}")
+    str = Digest::SHA256.digest("#{SecureRandom.uuid}_#{Time.now.to_i}")
     Base64.encode64(str).gsub(/[\s=]+/, "").tr('+/','-_')
   end
 
